@@ -126,6 +126,15 @@ let package = Package(
       name: "OrderedCollectionsTests",
       dependencies: ["OrderedCollections", "CollectionsTestSupport"],
       swiftSettings: settings),
+
+    // HashMap<Key, Value>
+    .target(
+      name: "Capsule",
+      swiftSettings: settings),
+    .testTarget(
+      name: "CapsuleTests",
+      dependencies: ["Capsule", "CollectionsTestSupport"],
+      swiftSettings: settings),
   ],
   cxxLanguageStandard: .cxx1z
 )
