@@ -54,6 +54,7 @@ let package = Package(
     .library(name: "Collections", targets: ["Collections"]),
     .library(name: "DequeModule", targets: ["DequeModule"]),
     .library(name: "OrderedCollections", targets: ["OrderedCollections"]),
+    .library(name: "Capsule", targets: ["Capsule"]),
   ],
   dependencies: [
     // This is only used in the benchmark executable target.
@@ -65,6 +66,7 @@ let package = Package(
       dependencies: [
         "DequeModule",
         "OrderedCollections",
+        "Capsule",
       ],
       path: "Sources/Collections",
       exclude: ["CMakeLists.txt"],
